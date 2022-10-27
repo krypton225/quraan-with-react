@@ -1,0 +1,76 @@
+@mixin flex-center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center-row;
+    flex-direction: column;
+}
+
+@mixin flex-between-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-around-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-evenly-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin flex-between-column {
+    @include flex-between-row;
+    flex-direction: column;
+}
+
+@mixin flex-around-column {
+    @include flex-around-row;
+    flex-direction: column;
+}
+
+@mixin flex-evenly-column {
+    @include flex-evenly-row;
+    flex-direction: column;
+}
+
+@mixin hero-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin fading($type) {
+    @if $type == "show" {
+        visibility: visible;
+        opacity: 1;
+    } @else if $type == "hide" {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@mixin transition-ease($prop) {
+    transition: $prop 0.3s ease;
+}
+
+@mixin transition-ease-in($prop) {
+    transition: $prop 0.3s ease-in;
+}
+
+@mixin transition-ease-out($prop) {
+    transition: $prop 0.3s ease-out;
+}
+
+@mixin transition-ease-in-out($prop) {
+    transition: $prop 0.3s ease-in-out;
+}
