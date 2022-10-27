@@ -7,9 +7,32 @@
 }
 
 body {
-    font-size: $font-size-main;
-    font-family: "Roboto", "Amiri", sans-serif;
+    font-size: $font-size-main !important;
+    font-family: "Roboto", "Amiri", sans-serif !important;
     background-color: map-get($colors, "light-beige");
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0.3rem;
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: map-get($colors, "green-dark") transparent;
+}
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: map-get($colors, "green-dark");
+    border-radius: 6px;
+    border: 3px solid transparent;
+}
+
+::selection {
+    background-color: map-get($colors, "gray-dark");
+    color: map-get($colors, "dark-beige");
 }
 
 a {

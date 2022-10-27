@@ -1,0 +1,9 @@
+.loading {
+    width: 150px;
+    height: 130px;
+    @include hero-img;
+    margin: 3rem auto;
+    @include flex-center-row;
+    text-align: center;
+    mix-blend-mode: multiply;
+}

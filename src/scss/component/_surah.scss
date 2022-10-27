@@ -1,0 +1,72 @@
+.my-container {
+    width: 80%;
+    position: relative;
+    margin: 4rem auto;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    @include media-breakpoint(1200px, max) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-breakpoint(991px, max) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint(768px, max) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.surah {
+    width: 100%;
+    padding: 1.5rem 0.6rem;
+    border-radius: 1.2rem;
+    @include flex-center-column;
+    background-color: map-get($colors, "dark-blue");
+    color: map-get($colors, "light-green");
+    cursor: pointer;
+    @include transition-ease-in(color);
+
+    &:hover {
+        color: darken(map-get($colors, "light-green"), 20%);
+    }
+
+    &__name {
+        font-size: 1.7rem !important;
+
+        & ~ h3 {
+            margin-block: 0.5rem !important;
+            font-size: 1.2rem !important;
+        }
+    }
+
+    &__line {
+        line-height: 2.5;
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        &__number {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+            @include flex-center-row;
+            display: inline-flex;
+            border-radius: 50%;
+            border: 0.2rem solid map-get($colors, "green-dark");
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+    }
+
+    &__content {
+        padding: 2rem;
+        margin-block: 2rem;
+    }
+}

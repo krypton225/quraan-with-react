@@ -74,3 +74,15 @@
 @mixin transition-ease-in-out($prop) {
     transition: $prop 0.3s ease-in-out;
 }
+
+@mixin media-breakpoint($point, $checker) {
+    @if $checker == "min" {
+        @media (min-width: $point) {
+            @content;
+        }
+    } @else if $checker == "max" {
+        @media (max-width: $point) {
+            @content;
+        }
+    }
+}

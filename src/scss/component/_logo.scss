@@ -1,0 +1,11 @@
+.logo {
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    &__img {
+        width: 100px;
+        margin: 0 auto;
+        mix-blend-mode: multiply;
+    }
+}

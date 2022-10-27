@@ -1,5 +1,10 @@
 @import "./abstract/index";
+@import "./abstract/commons";
 
 @import "./base/resets";
 
 @import "./typography/index";
+
+@import "./component/logo";
+@import "./component/loading";
+@import "./component/surah";
